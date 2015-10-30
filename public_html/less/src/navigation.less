@@ -1,0 +1,49 @@
+
+/// navigation bar
+.navbar {
+    ul.navbar-nav {
+        padding: 0;
+        margin: 0;
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            
+            a {
+                display: block;
+            }
+        }
+    }
+    
+    ul.navbar-default {
+        padding: @layout-padding-v @layout-padding-h;
+        border-bottom: solid 2px rgba(255,255,255,.2);
+        
+        li {
+            a {
+                padding: 24px 12px;
+                margin-bottom: -2px;
+                border-bottom: solid 2px transparent;
+                text-transform: uppercase;
+                font-family: 'Roboto-Bl';
+                font-size: 11pt;
+                color: white;
+                
+                .vendor(transition, border-bottom-color 200ms ease-out);
+            }
+            
+            a:hover,
+            &.active a {
+                border-bottom-color: white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+    .navbar ul.navbar-default li a {
+        padding: 12px 6px;
+        font-size: 9pt;
+    }
+}
+

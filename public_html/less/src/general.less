@@ -1,0 +1,31 @@
+
+// some general stuff
+html, body {
+    padding: 0;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+// links
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #006ba7;
+}
+
+a:active, a:hover {
+    color: lighten(#006ba7, 20%);
+}
+
+// typed text alignements
+.text-align(@align) {
+    .text-@{align} {
+        text-align: @align !important;
+    }
+}
+
+.text-align(left);
+.text-align(center);
+.text-align(right);
